@@ -9,7 +9,7 @@ if not os.path.exists("images/navier"):
     os.makedirs("images/navier")
 image_File = os.path.join("images/navier")
 plt.rc('text',usetex=True)
-L = 2*np.pi
+L = 1
 N = 512
 maxIter = 2001
 skip = 100 
