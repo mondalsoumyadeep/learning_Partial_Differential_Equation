@@ -1,4 +1,5 @@
-#Learning Partial Differential Equation
+#Learning Partial Differential Equation:
+
 This repository contains code for implementing nonlinear Partial Differential Equations (PDEs). The accompanying PDF provides an overview of the numerical methods used to solve these nonlinear PDEs.
 
 In the Euler folder, I have solved the 1D and 2D diffusion equations using the Euler method. For coupled non-linear equations visit this [link](https://github.com/mondalsoumyadeep/2024_Soft_Matter_Coarsening_of_aster_defects_in_a_model_polar_active_matter).
