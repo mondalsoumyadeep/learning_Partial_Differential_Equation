@@ -1,4 +1,5 @@
-#Learning Partial Differential Equation:
+# Implementation of Nonlinear Partial Differential Equations
+
 
 This repository contains code for implementing nonlinear Partial Differential Equations (PDEs). The accompanying PDF provides an overview of the numerical methods used to solve these nonlinear PDEs.
 
