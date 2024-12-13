@@ -48,7 +48,7 @@ os.makedirs(output_dir, exist_ok=True)
 # ETDRK2 time-stepping loop
 for t in range(maxIter):
     # Fourier transform of phi
-    phi_hat = fftn(phi) * dealias_mask
+    phi_hat = fftn(phi) 
 
     # Non-linear term in Fourier space
     non_linear_term = calculate_non_linear_term(phi)
