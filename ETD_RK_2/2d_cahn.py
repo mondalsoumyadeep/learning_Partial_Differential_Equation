@@ -27,10 +27,10 @@ maxIter = 5000  # Number of iterations
 noise_str = 0.1  # Noise strength
 
 # Initial condition
-np.random.seed(42)  # For reproducibility
+np.random.seed(42)  
 phi = 0.7 + noise_str * np.random.randn(N, N)
 
-# Precomputed terms for ETDRK2 scheme
+
 linear_operator = -kappa * M * ksqr**2
 exp_term = np.exp(linear_operator * dt)
 coef_etdrk2_1 = np.where(
@@ -59,11 +59,11 @@ for t in range(maxIter):
     non_linear_term = calculate_non_linear_term(phi)
     non_linear_term_hat = -ksqr * fftn(non_linear_term) * dealias_mask
 
-    # Stage 1: Intermediate prediction step
+    # Stage 1: Intermediate step
     a_n_hat = phi_hat * exp_term + coef_etdrk2_1 * non_linear_term_hat
     a_n = ifftn(a_n_hat).real
 
-    # Stage 2: Final correction
+    # Stage 2: Final step
     non_linear_a_n = calculate_non_linear_term(a_n)
     non_linear_a_n_hat = -ksqr * fftn(non_linear_a_n) * dealias_mask
     phi_hat = a_n_hat + coef_etdrk2_2 * (non_linear_a_n_hat - non_linear_term_hat)
